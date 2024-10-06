@@ -19,7 +19,6 @@ import {
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
@@ -39,12 +38,11 @@ const products = [
   { name: 'Gestion de prescription', description: 'Ne t\'en fait plus , tes informations seront bien stockés', href: '#', icon: ChartPieIcon },
   { name: 'Engagement', description: 'Vous pouvez échangés directement avec le docteur', href: '#', icon: CursorArrowRaysIcon },
   { name: 'Securité', description: 'Vos infos médicales seront crypté pour que seul le docteur en a l\'accés', href: '#', icon: FingerPrintIcon },
-  { name: 'Mbola misy ony fa apiny aveo', description: 'Ny Ranto ony ovy be', href: '#', icon: SquaresPlusIcon },
   { name: 'Automatisations', description: 'Vous serez informez dès lors que le docteur aurais fait une mise à jour de vôtre prescription', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
-  { name: 'S\'inscrire', href: '#signin', icon: PlayCircleIcon },
-  { name: 'Nous contacter', href: '#', icon: PhoneIcon },
+  { name: 'S\'inscrire', href: '/signin', icon: PlayCircleIcon },
+  { name: 'Nous contacter', href: '/contact', icon: PhoneIcon },
 ]
 
 export default function Header() {
@@ -120,21 +118,24 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6  text-gray-50">
+          <p className="text-sm font-semibold leading-6  text-gray-50">
             <Link to="/team">Qui Sommes-nous ?</Link>
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-50">
+          </p>
+          <p className="text-sm font-semibold leading-6 text-gray-50">
             <Link to="/contact">Contact</Link>
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-50">
+          </p>
+          <p className="text-sm font-semibold leading-6 text-gray-50">
+            <Link to="/features">Features</Link>
+          </p>
+          <p className="text-sm font-semibold leading-6 text-gray-50">
             <Link to="/membership">Abonnement</Link>
-          </a>
+          </p>
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="" className="text-sm font-semibold leading-6 text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
+          <p className="text-sm font-semibold leading-6 text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
             <Link to="/signin">Sign-In</Link> <span aria-hidden="true">&rarr;</span>
-          </a>
+          </p>
         </div>
 
         {/* <button className="hidden lg:flex lg:flex-1 lg:justify-end" onClick={() => setDarkMode(!darkMode)}>
@@ -190,6 +191,11 @@ export default function Header() {
                 >
                   Contact
                 </Link>
+                <Link to="/features"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
+                >
+                  Features
+                </Link>
                 <Link to="/membership"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
@@ -197,12 +203,13 @@ export default function Header() {
                 </Link>
               </div>
               <div className="py-6">
-                <a
-                  href="#signin"
+                <p
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
-                  Log in
-                </a>
+                  <Link to="/signin">
+                    Log in
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

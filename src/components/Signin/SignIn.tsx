@@ -12,9 +12,9 @@ const SignIn = () => {
 
   if (!role) {
     return (
-      <div id='signin' className="font-mono py-24 flex flex-col items-center justify-center text-2xl m-20">
+      <div id='signin' className="font-mono py-24 flex flex-col items-center justify-center text-2xl m-20 bg-gray-600/50 border-none rounded-xl">
         <h1 className="text-3xl mb-6">
-            <span className="font-bold py-2 text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-500">
+            <span className="font-bold py-2 text-lime-500 text-3xl ">
                 Inscription
             </span>
         </h1>

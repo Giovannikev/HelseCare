@@ -1,102 +1,120 @@
-import React, { useState } from 'react';
-
-const DoctorForm = () => {
-  const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    specialisation: '',
-    email: '',
-    numero: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Doctor data:', formData);
-  };
-
+export default function DoctorForm() {
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-600/30 text-xl font-mono p-6 mt-6 shadow-md rounded-md">
-        <h2 className="text-2xl mb-4">
-            <span className="font-bold py-2 text-transparent text-4xl bg-clip-text bg-gradient-to-r from-lime-400 to-lime-500">
-                Formulaire Docteur
-            </span>
-        </h2>
-
-        <div className="mb-4">
-            <label htmlFor="nom" className="block font-medium text-gray-50">Nom :</label>
-                <input
-                type="text"
-                id="nom"
-                name="nom"
-                value={formData.nom}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none"
-                required
-                />
+    <div className="font-mono">
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-gray-600/30 mt-20 mb-10 border-none rounded-2xl">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-lime-500">
+            Sign in to your Doctor account
+          </h2>
         </div>
 
-        <div className="mb-4">
-            <label htmlFor="prenom" className="block font-medium text-gray-50">Prénom :</label>
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form action="#" method="POST" className="space-y-6">
+
+            <div className="sm:col-span-3">
+              <label htmlFor="first-name" className="block text-xl text-left font-medium leading-6 text-gray-50">
+                First name :
+              </label>
+              <div className="mt-2">
                 <input
-                type="text"
-                id="prenom"
-                name="prenom"
-                value={formData.prenom}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none"
-                required
+                  id="first-name"
+                  name="first-name"
+                  type="text"
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
                 />
-        </div>
+              </div>
+            </div>
 
-        <div className="mb-4">
-            <label htmlFor="email" className="block font-medium text-gray-50">Email :</label>
+            <div className="sm:col-span-3">
+              <label htmlFor="last-name" className="block text-xl text-left font-medium leading-6 text-gray-50">
+                Last name :
+              </label>
+              <div className="mt-2">
                 <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none"
-                required
+                  id="last-name"
+                  name="last-name"
+                  type="text"
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
                 />
-        </div>
+              </div>
+            </div>
 
-        <div className="mb-4">
-            <label htmlFor="specialisation" className="block font-medium text-gray-50">Spécialisation :</label>
+            <div className="sm:col-span-4">
+              <label htmlFor="email" className="text-left block text-xl font-medium leading-6 text-gray-50">
+                Email address :
+              </label>
+              <div className="mt-2">
                 <input
-                type="text"
-                id="specialisation"
-                name="specialisation"
-                value={formData.specialisation}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none"
-                required
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
                 />
-        </div>
+              </div>
+            </div>
 
-        <div className="mb-4">
-            <label htmlFor="numero" className="block font-medium text-gray-50">Numéro de téléphone :</label>
+            <div className="sm:col-span-4">
+              <label htmlFor="number" className="block text-xl text-left font-medium leading-6 text-gray-50">
+                Number :
+              </label>
+              <div className="mt-2">
                 <input
-                type="tel"
-                id="numero"
-                name="numero"
-                value={formData.numero}
-                onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border rounded-md focus:outline-none"
-                required
+                  id="number"
+                  name="number"
+                  type="text"
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
                 />
+              </div>
+            </div>
+
+            <div className="sm:col-span-4">
+              <label htmlFor="specialisation" className="block text-xl text-left font-medium leading-6 text-gray-50">
+                Spécialisation :
+              </label>
+              <div className="mt-2">
+                <input
+                  id="specialisation"
+                  name="specialisation"
+                  type="text"
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between">
+                <label htmlFor="password" className="block text-xl text-left font-medium leading-6 text-gray-50">
+                  Password :
+                </label>
+              </div>
+              <div className="mt-2">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  autoComplete="off"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-0 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className="flex w-full justify-center rounded-md bg-lime-600 px-3 py-1.5 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-lime-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
+              >
+                Sign in
+              </button>
+            </div>
+          </form>
         </div>
-
-        <button type="submit" className="text-2xl bg-lime-600 hover:bg-lime-500 text-white px-4 py-2 rounded-md uppercase">S'inscrire</button>
-    </form>
-  );
-};
-
-export default DoctorForm;
+      </div>
+    </div>
+  )
+}

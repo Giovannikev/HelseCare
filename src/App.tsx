@@ -9,7 +9,7 @@ import SignIn from './components/Signin/SignIn'
 import PatientForm from './components/Signin/PatientForm'
 import DoctorForm from './components/Signin/DoctorForm'
 import Home from './components/home/Home'
-import NewsLetter from './components/home/NewsLetter'
+import Contact from './components/home/Contact'
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/patientForm" element={<PatientForm />} />
           <Route path="/doctorForm" element={<DoctorForm />} />
-          <Route path="/contact" element={<NewsLetter />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </>

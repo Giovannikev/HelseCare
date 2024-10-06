@@ -1,5 +1,3 @@
-
-
 const sections = [
     {
         title: 'Solutions',
@@ -51,7 +49,7 @@ const Footer = () => {
                         Les dernières mises à jour, articles et ressources, envoyés chaque semaine dans votre boîte aux lettres électronique
                         </p>
                         <form action="post" className="font-mono border-2 rounded-2xl border-lime-500 mt-2 mb-2 flex flex-col sm:flex-row">
-                            <input type="email" placeholder="Entrez votre Email" className="w-full text-gray-50 px-2 mt-2 mb-2 mr-0 bg-transparent border-none focus:outline-none" />
+                            <input type="email" placeholder="Entrez votre Email" className="w-full text-gray-50 px-2 mt-2 mb-2 mr-0 bg-transparent border-none focus:outline-none focus:ring-0" />
                             <button className="font-mono mt-0 p-4 w-sm h-full border-2 border-lime-500 text-gray-50 bg-lime-500 rounded-xl hover:border-lime-500">Envoyer</button>
                         </form>
                     </div>
