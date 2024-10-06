@@ -1,3 +1,7 @@
 npm install -D tailwindcss postcss autoprefixer
 npm install @heroicons/react
 npm install @headlessui/react
+npm install @tailwindcss/forms
+
+napina anty ny tailwind.config.json tao am plugins
+require('@tailwindcss/forms'),
