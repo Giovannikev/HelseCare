@@ -1,6 +1,3 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
 export default function Techno() {
     return (
       <div className="bg-transparent py-24 sm:py-32">

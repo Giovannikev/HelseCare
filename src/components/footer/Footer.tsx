@@ -50,16 +50,16 @@ const Footer = () => {
                         <p className="font-mono text-gray-50">
                         Les dernières mises à jour, articles et ressources, envoyés chaque semaine dans votre boîte aux lettres électronique
                         </p>
-                        <form action="" className="font-mono border-2 rounded-2xl border-lime-500 mt-2 mb-2 flex flex-col sm:flex-row">
-                            <input type="email" placeholder="Entrez votre Email" className="w-full text-gray-50 px-2 mt-4 mb-4 mr-0 bg-transparent focus:outline-none" />
+                        <form action="post" className="font-mono border-2 rounded-2xl border-lime-500 mt-2 mb-2 flex flex-col sm:flex-row">
+                            <input type="email" placeholder="Entrez votre Email" className="w-full text-gray-50 px-2 mt-2 mb-2 mr-0 bg-transparent border-none focus:outline-none" />
+                            <button className="font-mono mt-0 p-4 w-sm h-full border-2 border-lime-500 text-gray-50 bg-lime-500 rounded-xl hover:border-lime-500">Envoyer</button>
                         </form>
-                            <button className="font-mono p-2 mb-4 border-2 border-lime-500 text-gray-50 bg-transparent rounded-md hover:bg-lime-500 hover:border-lime-500 hover:text-gray-900">Envoyer</button>
                     </div>
                 </div>
 
                 <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center sm-text-center text-gray-500">
                     <p>
-                        <span className="font-mono py-8 text-lime-500">&copy;2024 <span className="text-xl"> HelseCare </span> , LLC. All rights reseved</span>
+                        <span className="font-mono py-8 text-lime-500">&copy; 2024 <strong className="text-xl font-serif"> HelseCare </strong> , LLC. All rights reseved</span>
                     </p>
                     <div className="flex sm:w-[auto] text-2xl text-lime-500 space-x-4">
                         <i className="uil uil-facebook cursor-pointer px-2 hover:text-lime-400"></i>

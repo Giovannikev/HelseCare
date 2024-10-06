@@ -1,8 +1,8 @@
-export default function Hero() {
+export default function Features() {
     return (
       <div className="font-mono py-24 sm:py-32">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-center text-base/7 font-semibold text-gray-900">Good Services</h2>
+          <h2 className="text-center text-base/7 font-semibold text-gray-50">Good Services</h2>
           <p className="mx-auto mt-2 max-w-lg text-pretty text-center text-4xl font-medium tracking-tight text-gray-950 sm:text-5xl">
             <span className="font-bold py-2 text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-500">
                 Simplicité  Efficacité  Fiabilité
@@ -10,10 +10,10 @@ export default function Hero() {
           </p>
           <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2">
-              <div className="absolute inset-px rounded-lg bg-white/60 lg:rounded-l-[2rem]"></div>
+              <div className="absolute inset-px rounded-lg bg-gray-600/50 lg:rounded-l-[2rem]"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-gray-950 max-lg:text-center">
+                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-lime-500 max-lg:text-center">
                     Responsive
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-50 max-lg:text-center">
@@ -37,10 +37,10 @@ export default function Hero() {
               <div className="absolute inset-px rounded-lg bg-white/60 max-lg:rounded-t-[2rem]"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-gray-950 max-lg:text-center">
+                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-lime-300 max-lg:text-center">
                     Performance
                   </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-50 max-lg:text-center">
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-900 max-lg:text-center">
                     Grâce à des technologies de pointe, on peut vous garantir la performance de ce site 
                   </p>
                 </div>
@@ -58,8 +58,8 @@ export default function Hero() {
               <div className="absolute inset-px rounded-lg bg-white/60"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
                 <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-gray-950 max-lg:text-center">Securité</p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-50 max-lg:text-center">
+                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-lime-300 max-lg:text-center">Securité</p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-900 max-lg:text-center">
                     L'Application utilise des protocoles de protection des données conformes aux réglementations en vigueur pour garantir la sécurité de vos données
                   </p>
                 </div>
@@ -74,10 +74,10 @@ export default function Hero() {
               <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
             </div>
             <div className="relative lg:row-span-2">
-              <div className="absolute inset-px rounded-lg bg-white/60 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+              <div className="absolute inset-px rounded-lg bg-gray-600/50 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-gray-950 max-lg:text-center">
+                  <p className="mt-2 text-lg/7 font-bold tracking-tight text-lime-500 max-lg:text-center">
                     APIs Fastudieux
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-50 max-lg:text-center">

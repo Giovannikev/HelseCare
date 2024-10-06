@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Dialog,
   DialogPanel,
@@ -42,21 +43,25 @@ const products = [
   { name: 'Automatisations', description: 'Vous serez informez dès lors que le docteur aurais fait une mise à jour de vôtre prescription', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
-  { name: 'S\'inscrire', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact', href: '#', icon: PhoneIcon },
+  { name: 'S\'inscrire', href: '#signin', icon: PlayCircleIcon },
+  { name: 'Nous contacter', href: '#', icon: PhoneIcon },
 ]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-transparent">
+    <header className="font-mono bg-transparent">
       <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between xl:px-0">
+
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-          <span className="font-bold py-2 text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-500">HelseCare</span>
-          </a>
+          <Link to="/home" className="-m-1.5 p-1.5">
+            <span className="font-serif py-2 text-transparent text-3xl bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-500">
+              HelseCare
+            </span>
+          </Link>
         </div>
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -68,7 +73,9 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+
           <Popover className="relative">
+
             <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-50">
               Fonctionnalités
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-50" />
@@ -97,6 +104,7 @@ export default function Header() {
                   </div>
                 ))}
               </div>
+
               <div className="grid grid-cols-2 divide-x divide-white bg-lime-300">
                 {callsToAction.map((item) => (
                   <a
@@ -113,25 +121,28 @@ export default function Header() {
           </Popover>
 
           <a href="#" className="text-sm font-semibold leading-6  text-gray-50">
-            Features
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6  text-gray-50">
-            Qui Sommes-nous ?
+            <Link to="/team">Qui Sommes-nous ?</Link>
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-50">
-            Contact
+            <Link to="/contact">Contact</Link>
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-50">
+            <Link to="/membership">Abonnement</Link>
           </a>
         </PopoverGroup>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6  text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
-            Log in <span aria-hidden="true">&rarr;</span>
+          <a href="" className="text-sm font-semibold leading-6 text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
+            <Link to="/signin">Sign-In</Link> <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
+
         {/* <button className="hidden lg:flex lg:flex-1 lg:justify-end" onClick={() => setDarkMode(!darkMode)}>
             <i className="text-black text-2xl uil uil-sun"></i>
             {darkMode ? 'Light Mode' : 'Dark Mode'}
         </button> */}
       </nav>
+
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -153,7 +164,7 @@ export default function Header() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-900">
-                    Product
+                    Fonctionnalités
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
@@ -169,28 +180,25 @@ export default function Header() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
+                <Link to="/team"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
-                  Features
-                </a>
-                <a
-                  href="#"
+                  Qui Sommes-nous ?
+                </Link>
+                <Link to="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
+                  Contact
+                </Link>
+                <Link to="/membership"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
-                  Company
-                </a>
+                  Abonnement
+                </Link>
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="#signin"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
                 >
                   Log in
