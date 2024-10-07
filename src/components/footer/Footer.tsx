@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const sections = [
     {
         title: 'Solutions',
@@ -20,7 +22,7 @@ const sections = [
 const Footer = () => {
     return(
         <>
-            <div className="w-full px-6  mt-0 bg-gray-900 text-lime-500 px-2">
+            <div className="w-full px-6  mt-0 bg-gray-transparent text-lime-500 px-2">
                 <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-200 py-8">
                     {
                         sections.map((section,index) =>(
@@ -32,7 +34,7 @@ const Footer = () => {
                                     {
                                         section.items.map((item,i) => (
                                             <li key={i} className="font-mono py-1 text-gray-500 hover:text-gray-50 cursor-pointer">
-                                                {item}
+                                               <Link to="/Legal">{item}</Link> 
                                             </li>
                                         ))
                                     }

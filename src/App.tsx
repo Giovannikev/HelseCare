@@ -10,6 +10,7 @@ import PatientForm from './components/Signin/PatientForm'
 import DoctorForm from './components/Signin/DoctorForm'
 import Home from './components/home/Home'
 import Contact from './components/home/Contact'
+import Legal from './components/legal/Legal'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/patientForm" element={<PatientForm />} />
           <Route path="/doctorForm" element={<DoctorForm />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Legal" element={<Legal />} />
         </Routes>
         <Footer />
       </>
