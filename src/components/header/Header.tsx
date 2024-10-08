@@ -49,7 +49,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="font-mono bg-transparent">
+    <header className="font-mono bg-gray-700/30 p-10">
       <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between xl:px-0">
 
         <div className="flex lg:flex-1">
@@ -133,9 +133,9 @@ export default function Header() {
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <p className="text-sm font-semibold leading-6 text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
-            <Link to="/signin">Sign-In</Link> <span aria-hidden="true">&rarr;</span>
-          </p>
+          <Link to="/signin" className="text-sm font-semibold leading-6 text-gray-50 border-2 rounded-md border-lime-600 px-10 py-2 hover:bg-lime-600 hover:text-white">
+            Sign-In <span aria-hidden="true">&rarr;</span>
+          </Link>
         </div>
 
         {/* <button className="hidden lg:flex lg:flex-1 lg:justify-end" onClick={() => setDarkMode(!darkMode)}>
@@ -203,13 +203,10 @@ export default function Header() {
                 </Link>
               </div>
               <div className="py-6">
-                <p
+                <Link to="/signin"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-50 hover:text-gray-900"
-                >
-                  <Link to="/signin">
-                    Log in
-                  </Link>
-                </p>
+                >Log in
+                </Link>
               </div>
             </div>
           </div>

@@ -2,12 +2,13 @@
 
 import { useState } from 'react'
 import { Field, Label, Switch } from '@headlessui/react'
+import { Link } from 'react-router-dom'
 
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="font-mono isolate bg-gray-800/50 rounded-xl mt-10 mb-10 px-6 py-24 sm:py-32 lg:px-8">
+    <div className="font-mono isolate bg-gray-800/50 rounded-xl mt-10 mb-10 px-6 m-20 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-lime-500 sm:text-4xl">Toutes l'équipes à votre dispostion</h2>
         <p className="mt-2 text-lg leading-8 text-gray-50">
@@ -103,9 +104,9 @@ export default function Contact() {
             </div>
             <Label className="text-sm leading-6 text-gray-50">
               By selecting this, you agree to our{' '}
-              <a href="#" className="font-semibold text-lime-600">
+              <Link to="/legal" className="font-semibold text-lime-600 underline">
                 privacy&nbsp;policy
-              </a>
+              </Link>
               .
             </Label>
           </Field>

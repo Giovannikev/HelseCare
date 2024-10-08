@@ -1,0 +1,60 @@
+.custom-calendar {
+    --main-bg-color: #1f2937; 
+    --selected-day-bg: #4d7c0f; 
+    --selected-day-color: #ffffff;
+    --today-bg-color: #84cc16; 
+    --default-day-color: #9ca3af;
+    --inactive-day-color: #6b7280;
+  }
+  
+  .react-calendar {
+    background-color: var(--main-bg-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--default-day-color);
+  }
+
+  .react-calendar__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .react-calendar__navigation button {
+    margin: 10px 20px; 
+  }
+  
+  .react-calendar__tile {
+    background: none;
+    margin: 2px;
+    color: white;
+  }
+  
+  .react-calendar__tile--now {
+    background-color: var(--today-bg-color);
+  }
+  
+  .react-calendar__tile--now:hover,
+  .react-calendar__tile--now:focus {
+    background-color: var(--today-bg-color);
+    opacity: 0.8;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: var(--selected-day-bg);
+    color: var(--selected-day-color);
+  }
+  
+  .react-calendar__tile--active:hover,
+  .react-calendar__tile--active:focus {
+    background-color: var(--selected-day-bg);
+    opacity: 0.8;
+  }
+  
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: var(--inactive-day-color);
+  }
+  
+  .react-calendar__tile--disabled {
+    color: var(--inactive-day-color);
+  }
+  

@@ -21,11 +21,11 @@ function Hero () {
               Une approche novatrice pour résoudre les difficultés lié aux suivis médical et de gestion des prescriptions
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <p
+              <Link to="/signin"
                 className="rounded-md bg-lime-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-lime-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
               >
-                <Link to="/signin">Commencer !</Link>
-              </p>
+                Commencer !
+              </Link>
             </div>
           </div>
         </div>
