@@ -16,7 +16,7 @@ const features = [
     
                 <dl className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8 bg-gray-800/30">
                 {features.map((feature) => (
-                    <div key={feature.name} className="border-t border-gray-50 pt-4">
+                    <div key={feature.name} className="border-t border-gray-50 rounded-xl pt-4">
                     <dt className="font-medium text-lime-500">{feature.name} : {feature.docteur}</dt>
                     <dd className="mt-2 text-sm text-gray-50">{feature.description}</dd>
                         <div className="grid grid-col-2 mt-5">
