@@ -13,6 +13,7 @@ import Contact from './components/home/Contact'
 import Legal from './components/legal/Legal'
 import PrescriptionPage from './components/patient/PrescriptionPage'
 import OrdonancePage from './components/patient/OrdonancePage'
+import ProfilePatient from './components/patient/ProfilePatient'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/Legal" element={<Legal />} />
           <Route path="/prescription" element={<PrescriptionPage />} />
           <Route path="/ordonance" element={<OrdonancePage />} />
+          <Route path="/profile" element={<ProfilePatient />} />
         </Routes>
         <Footer />
       </>

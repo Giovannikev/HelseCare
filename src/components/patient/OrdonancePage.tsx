@@ -1,13 +1,15 @@
-import Ordonance from './Ordonance';
-import Aside from './Aside'
+import Aside from './Aside';
+import Ordonance from './Ordonance'
 
-const OrdonancePage = () => {
+
+export default function MedicalDashboard() {
+  
+
   return (
-    <div className="flex">
+    <div className="relative min-h-screen bg-gray-900 flex">
       <Aside />
       <Ordonance />
+      
     </div>
   );
-};
-
-export default OrdonancePage;
+}
