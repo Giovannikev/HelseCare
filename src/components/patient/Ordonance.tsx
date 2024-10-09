@@ -42,7 +42,7 @@ const doctors = [
 export default function Ordonance() {
     const [sidebarVisible] = useState(true);
   return (
-    <div className={`p-8 w-full transition-all duration-300 ease-in-out ${sidebarVisible ? 'ml-64' : ''}`}>
+    <div className={`p-8 w-full transition-all duration-300 ease-in-out ${sidebarVisible ? '' : ''}`}>
         <h1 className="text-3xl font-bold mb-6">Mes docteurs</h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
           {doctors.map((doctor, index) => (
