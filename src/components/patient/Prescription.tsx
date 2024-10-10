@@ -1,5 +1,4 @@
-import Calendar from 'react-calendar';
-import './calendar.css';
+import Calendarlek from '../calendar/index';
 
 export default function Prescription() {
 
@@ -11,6 +10,7 @@ export default function Prescription() {
     { name: 'Molvit', type: "sirop", description: 'te hiteny movlit ftsn ', docteur: 'Dr Dre', src: "https://th.bing.com/th/id/OIP.DG3JVJx7hBL0nhg72tcu8QHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" },
     { name: 'menaka mahagaga', type: "fahagagana", description: 'menaka mahafaka ny fahantrana', docteur: 'Dr Dre', src: "https://th.bing.com/th/id/OIP.ngR7hKvLP_Nf68VZc2GwwgHaLH?w=204&h=306&c=7&r=0&o=5&dpr=1.3&pid=1.7" },
   ];
+
 
   return (
     <main className="font-mono flex-1 p-6">
@@ -51,10 +51,7 @@ export default function Prescription() {
         <section className="flex flex-col space-y-4">
           {/* Calendrier */}
           <div className="bg-gray-800/30 p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-bold mb-4">Calendrier</h2>
-            <Calendar
-              className="custom-calendar"
-            />
+            <Calendarlek />
           </div>
 
           {/* Stocks faibles */}

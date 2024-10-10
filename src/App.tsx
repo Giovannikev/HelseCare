@@ -15,6 +15,8 @@ import PrescriptionPage from './components/patient/PrescriptionPage'
 import OrdonancePage from './components/patient/OrdonancePage'
 import ProfilePatient from './components/patient/ProfilePatient'
 
+
+
 function App() {
 
   return (
