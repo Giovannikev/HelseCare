@@ -6,7 +6,6 @@ function ProfilePatient() {
   const [lastName, setLastName] = useState('Rivers');
   const [email, setEmail] = useState('sofia@devias.io');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [state, setState] = useState('');
   const [city, setCity] = useState('');
   const [chronicDisease, setChronicDisease] = useState('');
   
@@ -32,7 +31,7 @@ function ProfilePatient() {
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // Logique pour gérer la soumission des données
-    console.log({ firstName, lastName, email, phoneNumber, state, city, chronicDisease });
+    console.log({ firstName, lastName, email, phoneNumber, city, chronicDisease });
   };
 
   return (
